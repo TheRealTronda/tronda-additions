@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "tronda-additions",
+	"version": "${version}",
+	"name": "Tronda Additions",
+	"description": "Trying out fabric modding",
+	"authors": [
+		"TronderBomber"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/tronda-additions/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.tronda.trondaadditons.TrondaAdditions"
+		],
+		"fabric-datagen": [
+			"net.tronda.trondaadditons.TrondaAdditionsDataGenerator"
+		],
+		"client": [
+			"net.tronda.trondaadditons.TrondaAdditionsClient"
+		]
+	},
+	"mixins": [
+		"tronda-additions.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
