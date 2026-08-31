@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "tronda-additions:tin_block",
+    "tronda-additions:tin_ore_block",
+    "tronda-additions:tin_raw_block"
+  ]
+}
