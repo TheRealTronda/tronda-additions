@@ -3,5 +3,7 @@
   "item.tronda-additions.raw_tin": "Raw Tin",
 
   "block.tronda-additions.tin_block": "Block of Tin",
-  "block.tronda-additions.tin_ore_block": "Tin Ore"
+  "block.tronda-additions.tin_ore_block": "Tin Ore",
+  "block.tronda-additions.tin_raw_block": "Block of Raw Tin",
+  "itemgroup.tronda-additions.tronda_additions": "Tronda's Additions"
 }

@@ -23,6 +23,11 @@ public class ModBlocks {
                     .strength(2f)
                     .requiresTool()
                     .sounds(BlockSoundGroup.STONE)));
+    public static final Block TIN_RAW_BLOCK = registerBlock("tin_raw_block",
+            new Block(AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.TUFF)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -40,6 +45,7 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(TIN_BLOCK);
             entries.add(TIN_ORE_BLOCK);
+            entries.add(TIN_RAW_BLOCK);
         });
     }
 }
