@@ -3,11 +3,16 @@
   "item.tronda-additions.raw_tin": "Raw Tin",
   "item.tronda-additions.tin_chisel": "Tin Chisel",
   "item.tronda-additions.corn_cob": "Corn Cob",
+  "item.tronda-additions.coke": "Coke",
 
   "block.tronda-additions.tin_block": "Block of Tin",
   "block.tronda-additions.tin_ore_block": "Tin Ore",
   "block.tronda-additions.tin_raw_block": "Block of Raw Tin",
   "block.tronda-additions.magic_block": "Block of Magic Tin",
 
-  "itemgroup.tronda-additions.tronda_additions": "Tronda's Additions"
+  "itemgroup.tronda-additions.tronda_additions": "Tronda's Additions",
+
+  "tooltip.tronda-additions.magic_block": "This block is §8Magical§r",
+  "tooltip.tronda-additions.tin_chisel.shift_down": "This tool changes stone into their Brick §4counterpart§r",
+  "tooltip.tronda-additions.expand": "Press §1[SHIFT]§r for more information"
 }
