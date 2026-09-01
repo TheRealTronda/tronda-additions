@@ -26,6 +26,19 @@ public class ModItemGroups {
                         entries.add(ModBlocks.TIN_ORE_BLOCK);
                         entries.add(ModBlocks.TIN_BLOCK);
                         entries.add(ModBlocks.MAGIC_BLOCK);
+
+                        entries.add(ModBlocks.TIN_BLOCK_STAIRS);
+                        entries.add(ModBlocks.TIN_BLOCK_SLAB);
+
+                        entries.add(ModBlocks.TIN_BLOCK_BUTTON);
+                        entries.add(ModBlocks.TIN_BLOCK_PRESSURE_PLATE);
+
+                        entries.add(ModBlocks.TIN_BLOCK_FENCE);
+                        entries.add(ModBlocks.TIN_BLOCK_FENCE_GATE);
+                        entries.add(ModBlocks.TIN_BLOCK_WALL);
+
+                        entries.add(ModBlocks.TIN_BLOCK_TRAPDOOR);
+                        entries.add(ModBlocks.TIN_BLOCK_DOOR);
                     }).build());
 
     public static void registerItemGroups() {

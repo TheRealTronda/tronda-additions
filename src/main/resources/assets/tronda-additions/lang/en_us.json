@@ -10,6 +10,16 @@
   "block.tronda-additions.tin_raw_block": "Block of Raw Tin",
   "block.tronda-additions.magic_block": "Block of Magic Tin",
 
+  "blocks.tronda-additions.tin_block_stairs": "Tin Stairs",
+  "blocks.tronda-additions.tin_block_slab": "Tin Slab",
+  "blocks.tronda-additions.tin_block_button": "Tin Button",
+  "blocks.tronda-additions.tin_block_pressure_plate": "Tin Pressure Plate",
+  "blocks.tronda-additions.tin_block_fence": "Tin Fence",
+  "blocks.tronda-additions.tin_block_fence_gate": "Tin Fence Gate",
+  "blocks.tronda-additions.tin_block_wall": "Tin Wall",
+  "blocks.tronda-additions.tin_block_door": "Tin Door",
+  "blocks.tronda-additions.tin_block_trapdoor": "Tin Trapdoor",
+
   "itemgroup.tronda-additions.tronda_additions": "Tronda's Additions",
 
   "tooltip.tronda-additions.magic_block": "This block is §8Magical§r",

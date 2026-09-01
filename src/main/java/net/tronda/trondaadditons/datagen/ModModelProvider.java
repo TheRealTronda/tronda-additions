@@ -18,7 +18,20 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MAGIC_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TIN_ORE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TIN_RAW_BLOCK);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TIN_BLOCK);
+        BlockStateModelGenerator.BlockTexturePool tinBlockPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TIN_BLOCK);
+
+        tinBlockPool.stairs(ModBlocks.TIN_BLOCK_STAIRS);
+        tinBlockPool.slab(ModBlocks.TIN_BLOCK_SLAB);
+
+        tinBlockPool.button(ModBlocks.TIN_BLOCK_BUTTON);
+        tinBlockPool.pressurePlate(ModBlocks.TIN_BLOCK_PRESSURE_PLATE);
+
+        tinBlockPool.fence(ModBlocks.TIN_BLOCK_FENCE);
+        tinBlockPool.fenceGate(ModBlocks.TIN_BLOCK_FENCE_GATE);
+        tinBlockPool.wall(ModBlocks.TIN_BLOCK_WALL);
+
+        blockStateModelGenerator.registerDoor(ModBlocks.TIN_BLOCK_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.TIN_BLOCK_TRAPDOOR);
     }
 
     @Override

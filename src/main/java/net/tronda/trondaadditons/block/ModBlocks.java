@@ -1,9 +1,7 @@
 package net.tronda.trondaadditons.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.ExperienceDroppingBlock;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -21,6 +19,29 @@ public class ModBlocks {
                     .strength(2f)
                     .requiresTool()
                     .sounds(BlockSoundGroup.METAL)));
+
+    public static final Block TIN_BLOCK_STAIRS = registerBlock("tin_blocks_stairs",
+            new StairsBlock(ModBlocks.TIN_BLOCK.getDefaultState(),
+                    AbstractBlock.Settings.create().requiresTool().strength(2f).sounds(BlockSoundGroup.METAL)));
+    public static final Block TIN_BLOCK_SLAB = registerBlock("tin_blocks_slab",
+            new SlabBlock(AbstractBlock.Settings.create().requiresTool().strength(2f).sounds(BlockSoundGroup.METAL)));
+    public static final Block TIN_BLOCK_BUTTON = registerBlock("tin_blocks_button",
+            new ButtonBlock(BlockSetType.IRON, 2,
+                    AbstractBlock.Settings.create().requiresTool().strength(2f).noCollision().sounds(BlockSoundGroup.METAL)));
+    public static final Block TIN_BLOCK_PRESSURE_PLATE = registerBlock("tin_blocks_pressure_plate",
+            new PressurePlateBlock(BlockSetType.IRON, AbstractBlock.Settings.create().requiresTool().strength(2f).noCollision().sounds(BlockSoundGroup.METAL)));
+    public static final Block TIN_BLOCK_FENCE = registerBlock("tin_blocks_fence",
+            new FenceBlock(AbstractBlock.Settings.create().requiresTool().strength(2f).sounds(BlockSoundGroup.METAL)));
+    public static final Block TIN_BLOCK_FENCE_GATE = registerBlock("tin_blocks_fence_gate",
+            new FenceGateBlock(WoodType.ACACIA, AbstractBlock.Settings.create().requiresTool().strength(2f).sounds(BlockSoundGroup.METAL)));
+    public static final Block TIN_BLOCK_WALL= registerBlock("tin_blocks_wall",
+            new WallBlock(AbstractBlock.Settings.create().requiresTool().strength(2f).sounds(BlockSoundGroup.METAL)));
+    public static final Block TIN_BLOCK_DOOR= registerBlock("tin_blocks_door",
+            new DoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create().requiresTool().nonOpaque().strength(2f).sounds(BlockSoundGroup.METAL)));
+    public static final Block TIN_BLOCK_TRAPDOOR= registerBlock("tin_blocks_trapdoor",
+            new TrapdoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create().requiresTool().nonOpaque().strength(2f).sounds(BlockSoundGroup.METAL)));
+
+
     public static final Block TIN_ORE_BLOCK = registerBlock("tin_ore_block",
             new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
                     AbstractBlock.Settings.create()

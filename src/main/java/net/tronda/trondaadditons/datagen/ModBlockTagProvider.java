@@ -25,5 +25,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.TIN_BLOCK)
                 .add(ModBlocks.TIN_ORE_BLOCK)
                 .add(ModBlocks.TIN_RAW_BLOCK);
+        getOrCreateTagBuilder(BlockTags.FENCES)
+                .add(ModBlocks.TIN_BLOCK_FENCE);
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES)
+                .add(ModBlocks.TIN_BLOCK_FENCE_GATE);
+        getOrCreateTagBuilder(BlockTags.WALLS)
+                .add(ModBlocks.TIN_BLOCK_WALL);
     }
 }
