@@ -14,17 +14,19 @@ public class ModItemGroups {
     public static final ItemGroup TRONDA_ADDITIONS = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(TrondaAdditions.MOD_ID, "tronda_additions"),
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.RAW_TIN))
-                    .displayName(Text.translatable("itemgroup.tronda-additions.tronda_additions"))
+                    .displayName((Text.translatable("itemgroup.tronda-additions.tronda_additions")))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.RAW_TIN);
                         entries.add(ModItems.TIN_INGOT);
+                        entries.add(ModItems.TIN_CHISEL);
+                        entries.add(ModItems.CORN_COB);
+                        entries.add(ModItems.COKE);
 
                         entries.add(ModBlocks.TIN_RAW_BLOCK);
                         entries.add(ModBlocks.TIN_ORE_BLOCK);
                         entries.add(ModBlocks.TIN_BLOCK);
-                    })
-
-                    .build());
+                        entries.add(ModBlocks.MAGIC_BLOCK);
+                    }).build());
 
     public static void registerItemGroups() {
         TrondaAdditions.LOGGER.info("Registering item groups for " + TrondaAdditions.MOD_ID);

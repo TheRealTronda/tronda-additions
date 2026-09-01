@@ -2,6 +2,7 @@ package net.tronda.trondaadditons;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.util.Identifier;
 
 import net.tronda.trondaadditons.block.ModBlocks;
@@ -20,6 +21,8 @@ public class TrondaAdditions implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		FuelRegistry.INSTANCE.add(ModItems.COKE, 6400);
 	}
 
 	public static Identifier id(String path) {

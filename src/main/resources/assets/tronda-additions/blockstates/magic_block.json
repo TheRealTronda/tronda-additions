@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "tronda-additions:block/magic_block"
+    }
+  }
+}

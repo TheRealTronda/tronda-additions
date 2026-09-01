@@ -1,9 +1,13 @@
 {
   "item.tronda-additions.tin_ingot": "Tin Ingot",
   "item.tronda-additions.raw_tin": "Raw Tin",
+  "item.tronda-additions.tin_chisel": "Tin Chisel",
+  "item.tronda-additions.corn_cob": "Corn Cob",
 
   "block.tronda-additions.tin_block": "Block of Tin",
   "block.tronda-additions.tin_ore_block": "Tin Ore",
   "block.tronda-additions.tin_raw_block": "Block of Raw Tin",
+  "block.tronda-additions.magic_block": "Block of Magic Tin",
+
   "itemgroup.tronda-additions.tronda_additions": "Tronda's Additions"
 }

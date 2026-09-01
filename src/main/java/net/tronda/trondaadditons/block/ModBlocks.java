@@ -13,6 +13,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.tronda.trondaadditons.TrondaAdditions;
+import net.tronda.trondaadditons.block.custom.MagicBlock;
 
 public class ModBlocks {
     public static final Block TIN_BLOCK = registerBlock("tin_block",
@@ -31,6 +32,13 @@ public class ModBlocks {
                     .strength(2f)
                     .requiresTool()
                     .sounds(BlockSoundGroup.TUFF)));
+
+    public static final Block MAGIC_BLOCK = registerBlock("magic_block",
+            new MagicBlock(AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+            ));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
