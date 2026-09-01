@@ -2,10 +2,10 @@ package net.tronda.trondaadditons.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
+import net.minecraft.data.client.*;
+import net.minecraft.util.Identifier;
 import net.tronda.trondaadditons.block.ModBlocks;
+import net.tronda.trondaadditons.block.custom.TinRedstoneLamp;
 import net.tronda.trondaadditons.item.ModItems;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -32,6 +32,11 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerDoor(ModBlocks.TIN_BLOCK_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.TIN_BLOCK_TRAPDOOR);
+
+        Identifier lampOffIdentifier = TexturedModel.CUBE_ALL.upload(ModBlocks.TIN_REDSTONE_LAMP, blockStateModelGenerator.modelCollector);
+        Identifier lampOnIdentifier = blockStateModelGenerator.createSubModel(ModBlocks.TIN_REDSTONE_LAMP, "_on", Models.CUBE_ALL, TextureMap::all);
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.TIN_REDSTONE_LAMP)
+                .coordinate(BlockStateModelGenerator.createBooleanModelMap(TinRedstoneLamp.CLICKED, lampOnIdentifier, lampOffIdentifier)));
     }
 
     @Override

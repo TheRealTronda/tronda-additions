@@ -39,6 +39,8 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.TIN_BLOCK_TRAPDOOR);
                         entries.add(ModBlocks.TIN_BLOCK_DOOR);
+
+                        entries.add(ModBlocks.TIN_REDSTONE_LAMP);
                     }).build());
 
     public static void registerItemGroups() {

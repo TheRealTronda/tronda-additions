@@ -12,6 +12,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.tronda.trondaadditons.TrondaAdditions;
 import net.tronda.trondaadditons.block.custom.MagicBlock;
+import net.tronda.trondaadditons.block.custom.TinRedstoneLamp;
 
 public class ModBlocks {
     public static final Block TIN_BLOCK = registerBlock("tin_block",
@@ -40,6 +41,10 @@ public class ModBlocks {
             new DoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create().requiresTool().nonOpaque().strength(2f).sounds(BlockSoundGroup.METAL)));
     public static final Block TIN_BLOCK_TRAPDOOR= registerBlock("tin_blocks_trapdoor",
             new TrapdoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create().requiresTool().nonOpaque().strength(2f).sounds(BlockSoundGroup.METAL)));
+
+    public static final Block TIN_REDSTONE_LAMP = registerBlock("tin_redstone_lamp",
+            new TinRedstoneLamp(AbstractBlock.Settings.create().requiresTool().strength(2f).sounds(BlockSoundGroup.METAL)
+                    .luminance(state -> state.get(TinRedstoneLamp.CLICKED) ? 15 : 0)));
 
 
     public static final Block TIN_ORE_BLOCK = registerBlock("tin_ore_block",
