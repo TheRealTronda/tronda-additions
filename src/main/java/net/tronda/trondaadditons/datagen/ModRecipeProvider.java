@@ -47,5 +47,62 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModBlocks.TIN_BLOCK)
                 .criterion(hasItem(ModItems.TIN_INGOT), conditionsFromItem(ModItems.TIN_INGOT))
                 .offerTo(exporter, Identifier.of(TrondaAdditions.MOD_ID, "magic_block_default"));
+
+        generateSwordRecipe(exporter, ModItems.TIN_SWORD, ModItems.TIN_INGOT, "tin");
+        generatePickaxeRecipe(exporter, ModItems.TIN_PICKAXE, ModItems.TIN_INGOT, "tin");
+        generateAxeRecipe(exporter, ModItems.TIN_AXE, ModItems.TIN_INGOT, "tin");
+        generateShovelRecipe(exporter, ModItems.TIN_SHOVEL, ModItems.TIN_INGOT, "tin");
+        generateHoeRecipe(exporter, ModItems.TIN_HOE, ModItems.TIN_INGOT, "tin");
+    }
+
+    public void generateSwordRecipe(RecipeExporter exporter, ItemConvertible resultItem, ItemConvertible materialItem, String prefix) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, resultItem)
+                .pattern(" $ ")
+                .pattern(" $ ")
+                .pattern(" | ")
+                .input('$', materialItem)
+                .input('|', Items.STICK)
+                .criterion(hasItem(materialItem), conditionsFromItem(materialItem))
+                .offerTo(exporter, Identifier.of(TrondaAdditions.MOD_ID, prefix +"_sword_default"));
+    }
+    public void generatePickaxeRecipe(RecipeExporter exporter, ItemConvertible resultItem, ItemConvertible materialItem, String prefix) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, resultItem)
+                .pattern("$$$")
+                .pattern(" | ")
+                .pattern(" | ")
+                .input('$', materialItem)
+                .input('|', Items.STICK)
+                .criterion(hasItem(materialItem), conditionsFromItem(materialItem))
+                .offerTo(exporter, Identifier.of(TrondaAdditions.MOD_ID, prefix +"_pickaxe_default"));
+    }
+    public void generateHoeRecipe(RecipeExporter exporter, ItemConvertible resultItem, ItemConvertible materialItem, String prefix) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, resultItem)
+                .pattern(" $$")
+                .pattern(" | ")
+                .pattern(" | ")
+                .input('$', materialItem)
+                .input('|', Items.STICK)
+                .criterion(hasItem(materialItem), conditionsFromItem(materialItem))
+                .offerTo(exporter, Identifier.of(TrondaAdditions.MOD_ID, prefix +"_hoe_default"));
+    }
+    public void generateShovelRecipe(RecipeExporter exporter, ItemConvertible resultItem, ItemConvertible materialItem, String prefix) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, resultItem)
+                .pattern(" $ ")
+                .pattern(" | ")
+                .pattern(" | ")
+                .input('$', materialItem)
+                .input('|', Items.STICK)
+                .criterion(hasItem(materialItem), conditionsFromItem(materialItem))
+                .offerTo(exporter, Identifier.of(TrondaAdditions.MOD_ID, prefix +"_shovel_default"));
+    }
+    public void generateAxeRecipe(RecipeExporter exporter, ItemConvertible resultItem, ItemConvertible materialItem, String prefix) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, resultItem)
+                .pattern(" $$")
+                .pattern(" |$")
+                .pattern(" | ")
+                .input('$', materialItem)
+                .input('|', Items.STICK)
+                .criterion(hasItem(materialItem), conditionsFromItem(materialItem))
+                .offerTo(exporter, Identifier.of(TrondaAdditions.MOD_ID, prefix +"_axe_default"));
     }
 }

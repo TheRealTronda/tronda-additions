@@ -46,5 +46,11 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.TIN_CHISEL, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_TIN, Models.GENERATED);
         itemModelGenerator.register(ModItems.CORN_COB, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.TIN_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.TIN_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.TIN_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.TIN_HOE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.TIN_PICKAXE, Models.HANDHELD);
     }
 }

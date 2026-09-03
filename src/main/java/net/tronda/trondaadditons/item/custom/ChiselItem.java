@@ -17,6 +17,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.world.World;
 import net.tronda.trondaadditons.block.ModBlocks;
+import net.tronda.trondaadditons.component.ModDataComponentTypes;
 
 import java.util.List;
 import java.util.Map;
@@ -42,7 +43,7 @@ public class ChiselItem extends Item {
 
                 world.playSound(null, context.getBlockPos(), SoundEvents.BLOCK_GRINDSTONE_USE, SoundCategory.BLOCKS);
 
-                world.addParticle(ParticleTypes.CLOUD, context.getBlockPos().getX(), context.getBlockPos().getY(), context.getBlockPos().getZ(), 0.0, 0.0, 0.0);
+                context.getStack().set(ModDataComponentTypes.COORDINATES, context.getBlockPos());
             }
         }
 
@@ -55,6 +56,10 @@ public class ChiselItem extends Item {
             tooltip.add(Text.translatable("tooltip.tronda-additions.tin_chisel.shift_down"));
         } else {
             tooltip.add(Text.translatable("tooltip.tronda-additions.expand"));
+        }
+
+        if (stack.get(ModDataComponentTypes.COORDINATES) != null) {
+            tooltip.add(Text.literal("Last changed at " + stack.get(ModDataComponentTypes.COORDINATES)));
         }
 
         super.appendTooltip(stack, context, tooltip, type);

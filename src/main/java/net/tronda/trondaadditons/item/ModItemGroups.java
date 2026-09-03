@@ -41,6 +41,12 @@ public class ModItemGroups {
                         entries.add(ModBlocks.TIN_BLOCK_DOOR);
 
                         entries.add(ModBlocks.TIN_REDSTONE_LAMP);
+
+                        entries.add(ModItems.TIN_SWORD);
+                        entries.add(ModItems.TIN_PICKAXE);
+                        entries.add(ModItems.TIN_AXE);
+                        entries.add(ModItems.TIN_SHOVEL);
+                        entries.add(ModItems.TIN_HOE);
                     }).build());
 
     public static void registerItemGroups() {

@@ -1,8 +1,7 @@
 package net.tronda.trondaadditons.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -17,6 +16,22 @@ public class ModItems {
 
     public static final Item CORN_COB = registerItem("corn_cob", new Item(new Item.Settings().food(ModFoodComponent.CORN_COB)));
     public static final Item COKE = registerItem("coke", new Item(new Item.Settings()));
+
+    public static final Item TIN_SWORD = registerItem("tin_sword",
+            new SwordItem(ModToolMaterials.TIN, new Item.Settings().attributeModifiers(
+                    SwordItem.createAttributeModifiers(ModToolMaterials.TIN, 3, -2.4f))));
+    public static final Item TIN_PICKAXE = registerItem("tin_pickaxe",
+            new PickaxeItem(ModToolMaterials.TIN, new Item.Settings().attributeModifiers(
+                    PickaxeItem.createAttributeModifiers(ModToolMaterials.TIN, 1, -2.4f))));
+    public static final Item TIN_SHOVEL = registerItem("tin_shovel",
+            new ShovelItem(ModToolMaterials.TIN, new Item.Settings().attributeModifiers(
+                    ShovelItem.createAttributeModifiers(ModToolMaterials.TIN, 1.5f, -3.0f))));
+    public static final Item TIN_AXE = registerItem("tin_axe",
+            new AxeItem(ModToolMaterials.TIN, new Item.Settings().attributeModifiers(
+                    AxeItem.createAttributeModifiers(ModToolMaterials.TIN, 6, -3.2f))));
+    public static final Item TIN_HOE = registerItem("tin_hoe",
+            new HoeItem(ModToolMaterials.TIN, new Item.Settings().attributeModifiers(
+                    HoeItem.createAttributeModifiers(ModToolMaterials.TIN, 0, -3.0f))));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(TrondaAdditions.MOD_ID, name), item);

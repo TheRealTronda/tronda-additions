@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 import net.tronda.trondaadditons.block.ModBlocks;
+import net.tronda.trondaadditons.util.ModTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -31,5 +32,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.TIN_BLOCK_FENCE_GATE);
         getOrCreateTagBuilder(BlockTags.WALLS)
                 .add(ModBlocks.TIN_BLOCK_WALL);
+        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_TIN_TOOL)
+                .addTag(BlockTags.NEEDS_STONE_TOOL);
     }
 }

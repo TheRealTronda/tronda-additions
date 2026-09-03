@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.util.Identifier;
 
 import net.tronda.trondaadditons.block.ModBlocks;
+import net.tronda.trondaadditons.component.ModDataComponentTypes;
 import net.tronda.trondaadditons.item.ModItemGroups;
 import net.tronda.trondaadditons.item.ModItems;
 import org.slf4j.Logger;
@@ -21,6 +22,8 @@ public class TrondaAdditions implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		ModDataComponentTypes.registerDataComponentTypes();
 
 		FuelRegistry.INSTANCE.add(ModItems.COKE, 6400);
 	}
