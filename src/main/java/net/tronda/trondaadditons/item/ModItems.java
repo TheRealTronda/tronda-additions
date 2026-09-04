@@ -7,6 +7,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.tronda.trondaadditons.TrondaAdditions;
 import net.tronda.trondaadditons.item.custom.ChiselItem;
+import net.tronda.trondaadditons.item.custom.HammerItem;
 
 public class ModItems {
     public static final Item TIN_INGOT = registerItem("tin_ingot", new Item(new Item.Settings()));
@@ -32,6 +33,10 @@ public class ModItems {
     public static final Item TIN_HOE = registerItem("tin_hoe",
             new HoeItem(ModToolMaterials.TIN, new Item.Settings().attributeModifiers(
                     HoeItem.createAttributeModifiers(ModToolMaterials.TIN, 0, -3.0f))));
+
+    public static final Item TIN_HAMMER = registerItem("tin_hammer",
+            new HammerItem(ModToolMaterials.TIN, new Item.Settings().attributeModifiers(
+                    PickaxeItem.createAttributeModifiers(ModToolMaterials.TIN, 7, -3.4f))));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(TrondaAdditions.MOD_ID, name), item);

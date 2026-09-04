@@ -47,6 +47,8 @@ public class ModItemGroups {
                         entries.add(ModItems.TIN_AXE);
                         entries.add(ModItems.TIN_SHOVEL);
                         entries.add(ModItems.TIN_HOE);
+
+                        entries.add(ModItems.TIN_HAMMER);
                     }).build());
 
     public static void registerItemGroups() {
